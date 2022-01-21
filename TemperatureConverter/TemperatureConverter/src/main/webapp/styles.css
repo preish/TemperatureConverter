@@ -1,0 +1,19 @@
+@charset "ISO-8859-1";
+
+/* This prevents the background gradient to repeat */
+html {
+	min-height: 100%;
+}
+
+body {
+	background-image: linear-gradient(to bottom right, rgba(255,0,0,0), rgba(255,0,0,1));
+	
+}
+
+#title {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
