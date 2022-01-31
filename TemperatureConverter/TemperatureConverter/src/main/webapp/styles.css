@@ -11,14 +11,21 @@ body {
 	 text-align: center;
 }
 
-.temperatureConverter {
+.container {
 	display: block;
 	text-align: center;
 }
 
-.temperatureForm {
-	display: inline-block;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
-}
+/* .temperatureFormLeft{ */
+/* 	display: inline-block; */
+/* 	margin-left: auto; */
+/* 	margin-right: auto; */
+/* 	text-align: left; */
+/* } */
+
+/* .temperatureFormRight{ */
+/* 	display: inline-block; */
+/* 	margin-left: auto; */
+/* 	margin-right: auto; */
+/* 	text-align: left; */
+/* } */

@@ -6,27 +6,45 @@
 
 <!-- Styles -->
 <link rel="stylesheet" href="styles.css" type="text/css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
 </head>
 <body>
 	<h1>Temperature Scale Converter</h1>
-	<p>Enter in a temperature, choose the appropriate scale that you would like to convert to, and click "Go" to convert the temperature to your desired scale.</p>
-	<p>NOTE: Choosing a scale will convert the temperature entered TO that scale. The temperature you enter will be assumed as the other scale.</p>
-	
-	<div class="temperatureConverter">
-		<!-- Change action tag to what will actually be submitted -->
-		<form class="temperatureForm" action="/action_page.php">
-		 	<input type="text" id="userTemperature">
-		 	<button type="button" onclick="calculateNewTemperature()">Go</button>
-		 	<br>
-		 	<label for="fTemperature">Fahrenheit: </label>
-		 	<input type="radio" id="fTemperature" name="temperatureScale">
-		 	<label for="cTemperature">Celsius </label>
-		 	<input type="radio" id="cTemperature" name="temperatureScale">
-		</form>
+	<p>Enter in a temperature, choose the appropriate scale that you
+		would like to convert to, and click "Go" to convert the temperature to
+		your desired scale.</p>
+	<p>NOTE: Choosing a scale will convert the temperature entered TO
+		that scale. The temperature you enter will be assumed as the other
+		scale.</p>
+
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<form class="temperatureFormLeft" action="">
+					<input type="text" id="userTemperatureLeft"> <br> <label
+						for="fTemperature">Fahrenheit: </label> <input type="radio"
+						id="fTemperatureLeft" name="temperatureScaleLeft"> <label
+						for="cTemperature">Celsius </label> <input type="radio"
+						id="cTemperatureLeft" name="temperatureScaleLeft">
+				</form>
+			</div>
+			<div class="col">
+				<form class="temperatureFormRight" action="">
+					<input type="text" id="userTemperatureRight">
+					<button type="button" onclick="calculateNewTemperature()">Go</button>
+					<br> <label for="fTemperature">Fahrenheit: </label> <input
+						type="radio" id="fTemperatureRight" name="temperatureScaleRight">
+					<label for="cTemperature">Celsius </label> <input type="radio"
+						id="cTemperatureRight" name="temperatureScaleRight">
+				</form>
+			</div>
+		</div>
 	</div>
-	
-	<!-- External Javascript -->
+
+	<!-- Scripts -->
 	<script src="temperature-converter.js" type="text/javascript"></script>
 </body>
 </html>
