@@ -13,16 +13,11 @@
 </head>
 <body>
 	<h1>Temperature Scale Converter</h1>
-	<p>Enter in a temperature, choose the appropriate scale that you
-		would like to convert to, and click "Go" to convert the temperature to
-		your desired scale.</p>
-	<p>NOTE: Choosing a scale will convert the temperature entered TO
-		that scale. The temperature you enter will be assumed as the other
-		scale.</p>
+	<p>Enter in a temperature on either side, choose the appropriate scales for the conversion, and the Converter will calculate the temperature change.</p>
 
 	<div class="container">
 		<div class="row">
-			<div class="col">
+			<div class="col-md-5">
 				<form class="temperatureFormLeft" action="">
 					<input type="text" id="userTemperatureLeft"> <br> <label
 						for="fTemperature">Fahrenheit: </label> <input type="radio"
@@ -31,10 +26,11 @@
 						id="cTemperatureLeft" name="temperatureScaleLeft">
 				</form>
 			</div>
-			<div class="col">
+			<div class="col-md-2">=</div>	
+			<div class="col-md-5">
 				<form class="temperatureFormRight" action="">
 					<input type="text" id="userTemperatureRight">
-					<button type="button" onclick="calculateNewTemperature()">Go</button>
+<!-- 					<button type="button" onclick="calculateNewTemperature()">Go</button> -->
 					<br> <label for="fTemperature">Fahrenheit: </label> <input
 						type="radio" id="fTemperatureRight" name="temperatureScaleRight">
 					<label for="cTemperature">Celsius </label> <input type="radio"
