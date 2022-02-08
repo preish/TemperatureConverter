@@ -1,0 +1,11 @@
+Use Cases:
+1. User leaves both textboxes blank and clicks CONVERT
+2. User enters a value in left textbox and clicks convert (right textbox empty)
+3. User enters a value in right textbox and clicks convert (left textbox empty)
+4. User enters a value in both the left and right textbox and clicks convert
+
+Desired Behavior Per Use Case:
+1. Alert dialog notifies user of empty text boxes
+2. Value of right textbox appears as result of temperature conversion
+3. Value of left textbox appears as result of temperature conversion
+4. Alert dialog tells user to empty out one of the textboxes?
