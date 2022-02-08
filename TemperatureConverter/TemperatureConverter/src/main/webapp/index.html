@@ -13,7 +13,9 @@
 </head>
 <body>
 	<h1>Temperature Scale Converter</h1>
-	<p>Enter in a temperature on either side, choose the appropriate scales for the conversion, and the Converter will calculate the temperature change.</p>
+	<p>Enter in a temperature on either side, choose the appropriate
+		scales for the conversion, and click "Convert!" to calculate the
+		temperature change.</p>
 
 	<div class="container">
 		<div class="row">
@@ -26,17 +28,20 @@
 						id="cTemperatureLeft" name="temperatureScaleLeft">
 				</form>
 			</div>
-			<div class="col-md-2">=</div>	
+			<div class="col-md-2">=</div>
 			<div class="col-md-5">
 				<form class="temperatureFormRight" action="">
-					<input type="text" id="userTemperatureRight">
-<!-- 					<button type="button" onclick="calculateNewTemperature()">Go</button> -->
-					<br> <label for="fTemperature">Fahrenheit: </label> <input
-						type="radio" id="fTemperatureRight" name="temperatureScaleRight">
-					<label for="cTemperature">Celsius </label> <input type="radio"
+					<input type="text" id="userTemperatureRight"> <br> <label
+						for="fTemperature">Fahrenheit: </label> <input type="radio"
+						id="fTemperatureRight" name="temperatureScaleRight"> <label
+						for="cTemperature">Celsius </label> <input type="radio"
 						id="cTemperatureRight" name="temperatureScaleRight">
 				</form>
 			</div>
+		</div>
+		<div class="row">
+			<button type="button" class="btn btn-btn-primary"
+				onclick="calculateNewTemperature()">Convert!</button>
 		</div>
 	</div>
 
