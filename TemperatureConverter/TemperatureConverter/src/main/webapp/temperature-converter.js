@@ -30,18 +30,21 @@ function calculateNewTemperature() {
 			else if(document.getElementById('fTemperatureRight').checked) {
 				chosenTemperatureScale = " Celsius.";
 				var result = convertToCelsius(userTemperatureRight);
-				alert(userTemperatureLeft + " degrees Fahrenhet converts to " + result + chosenTemperatureScale);	
+				alert(userTemperatureRight + " degrees Fahrenhet converts to " + result + chosenTemperatureScale);	
 			}
 			else if(document.getElementById('cTemperatureRight').checked) {
 				chosenTemperatureScale = " Fahrenheit.";
 				var result = convertToFahrenheit(userTemperatureRight);
-				alert(userTemperatureLeft + " degrees Celsius converts to " + result + chosenTemperatureScale);
+				alert(userTemperatureRight + " degrees Celsius converts to " + result + chosenTemperatureScale);
 			}
 			else {
 				alert("Please select a temperature scale.");
 			}
-			uncheckRadioButton();
 		}
+		// Workaround to remove both checks on radio buttons (if both sides are checked)
+		// Is this the best way to do this???
+		uncheckRadioButton();
+		uncheckRadioButton();
 	}
 }
 
@@ -57,7 +60,6 @@ function convertToCelsius(userTemperature) {
 
 // Resets all radio buttons to default (unchecked) state
 function uncheckRadioButton() {
-	// TODO Only grabs first radio button and resets it; does not reset both forms if both forms have radio buttons checked
 	var radio = document.querySelector('input[type=radio]:checked');
 	radio.checked = false;
 }
