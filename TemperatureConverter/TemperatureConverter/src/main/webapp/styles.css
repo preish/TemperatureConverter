@@ -1,6 +1,7 @@
 @charset "ISO-8859-1";
 
 body {
+	/* Does not work right now */
 	background-image: url('./img/Cool_Gradient.jpeg');
 	text-align: center;
 	font-family: 'Balsamiq Sans', cursive;
