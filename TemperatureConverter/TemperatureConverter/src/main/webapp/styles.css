@@ -1,14 +1,19 @@
 @charset "ISO-8859-1";
 
-/* This prevents the background gradient to repeat */
-html {
-	min-height: 100%;
+body {
+	background-image: url('./img/Cool_Gradient.jpeg');
+	text-align: center;
+	font-family: 'Balsamiq Sans', cursive;
+	font-weight: bolder;
+	font-size: 16px;
 }
 
-body {
-	background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0),
-		rgba(255, 0, 0, 1));
-	text-align: center;
+h1 {
+	font-family: 'Patua One', cursive;
+	font-size: 100px;
+}
+
+p {
 }
 
 .container {
