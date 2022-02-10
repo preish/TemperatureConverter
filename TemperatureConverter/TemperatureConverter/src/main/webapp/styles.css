@@ -3,6 +3,7 @@
 body {
 	/* Does not work right now */
 	background-image: url('./img/Cool_Gradient.jpeg');
+	background-size: cover;
 	text-align: center;
 	font-family: 'Balsamiq Sans', cursive;
 	font-weight: bolder;

@@ -3,39 +3,57 @@ function calculateNewTemperature() {
 	var chosenTemperatureScale = " degrees ";
 	var userTemperatureLeft = document.getElementById('userTemperatureLeft').value;
 	var userTemperatureRight = document.getElementById('userTemperatureRight').value;
-	
+
 	// Check if both textboxes are empty
-	if(userTemperatureLeft == "" && userTemperatureRight == "")
+	if (userTemperatureLeft == "" && userTemperatureRight == "")
 		alert("Please enter a temperature to convert.");
 	else {
 		// Check if both textboxes are filled
-		if(userTemperatureLeft != "" && userTemperatureRight != "")
+		if (userTemperatureLeft != "" && userTemperatureRight != "")
 			alert("At least one textbox must be empty.");
-		else if((document.getElementById('fTemperatureLeft').checked || document.getElementById('cTemperatureLeft').checked) && (document.getElementById('fTemperatureRight').checked || document.getElementById('cTemperatureRight').checked))
+		else if ((document.getElementById('fTemperatureLeft').checked || document.getElementById('cTemperatureLeft').checked) && (document.getElementById('fTemperatureRight').checked || document.getElementById('cTemperatureRight').checked))
 			alert("Only one temperature scale may be checked at any given time.")
 		else {
 			// If left textbox is filled, convert from left to right
-			if(document.getElementById('fTemperatureLeft').checked) {
-				chosenTemperatureScale = " Celsius.";
-				var result = convertToCelsius(userTemperatureLeft);
-				alert(userTemperatureLeft + " degrees Fahrenhet converts to " + result + chosenTemperatureScale);
+			// Also check if textbox above checked temperature scale is not empty
+			if (document.getElementById('fTemperatureLeft').checked) {
+				if (userTemperatureLeft == "")
+					alert("Please enter a temperature above the selected temperature scale.")
+				else {
+					chosenTemperatureScale = " Celsius.";
+					var result = convertToCelsius(userTemperatureLeft);
+					alert(userTemperatureLeft + " degrees Fahrenhet converts to " + result + chosenTemperatureScale);
+				}
 			}
-			else if(document.getElementById('cTemperatureLeft').checked) {
-				chosenTemperatureScale = " Fahrenheit.";
-				var result = convertToFahrenheit(userTemperatureLeft);
-				alert(userTemperatureLeft + " degrees Celsius converts to " + result + chosenTemperatureScale);
+			else if (document.getElementById('cTemperatureLeft').checked) {
+				if (userTemperatureLeft == "")
+					alert("Please enter a temperature above the selected temperature scale.")
+				else {
+					chosenTemperatureScale = " Fahrenheit.";
+					var result = convertToFahrenheit(userTemperatureLeft);
+					alert(userTemperatureLeft + " degrees Celsius converts to " + result + chosenTemperatureScale);
+				}
 			}
-			
+
 			// If right textbox is filled, convert from right to left
-			else if(document.getElementById('fTemperatureRight').checked) {
-				chosenTemperatureScale = " Celsius.";
-				var result = convertToCelsius(userTemperatureRight);
-				alert(userTemperatureRight + " degrees Fahrenhet converts to " + result + chosenTemperatureScale);	
+			// Also check if textbox above checked temperature scale is not empty
+			else if (document.getElementById('fTemperatureRight').checked) {
+				if (userTemperatureRight == "")
+					alert("Please enter a temperature above the selected temperature scale.")
+				else {
+					chosenTemperatureScale = " Celsius.";
+					var result = convertToCelsius(userTemperatureRight);
+					alert(userTemperatureRight + " degrees Fahrenhet converts to " + result + chosenTemperatureScale);
+				}
 			}
-			else if(document.getElementById('cTemperatureRight').checked) {
-				chosenTemperatureScale = " Fahrenheit.";
-				var result = convertToFahrenheit(userTemperatureRight);
-				alert(userTemperatureRight + " degrees Celsius converts to " + result + chosenTemperatureScale);
+			else if (document.getElementById('cTemperatureRight').checked) {
+				if (userTemperatureRight == "")
+					alert("Please enter a temperature above the selected temperature scale.")
+				else {
+					chosenTemperatureScale = " Fahrenheit.";
+					var result = convertToFahrenheit(userTemperatureRight);
+					alert(userTemperatureRight + " degrees Celsius converts to " + result + chosenTemperatureScale);
+				}
 			}
 			else {
 				alert("Please select a temperature scale.");
